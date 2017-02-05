@@ -1,0 +1,13 @@
+main{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+.demo-card-wide{
+    width: 100%;
+}
+
+.mdl-button{
+    font-weight: bold;
+}

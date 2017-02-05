@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Recognition</title>
+    <link rel="stylesheet" href="static/css/material.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Image Recognition</span>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div id="dragandrophandler" class="demo-card-wide mdl-card mdl-shadow--6dp">
+                <div align="center" style="color: #9E9E9E;padding: 50px;">
+                    Drag and drop image here or
+                    <input type="file" id="file" style="display: none"/>
+                    <button id="uploadImage"
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-js-ripple-effect">
+                        Upload Image
+                    </button>
+                    <br>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input id="filename" class="mdl-textfield__input" type="text" readonly>
+                        <label id="filelabel" class="mdl-textfield__label" for="filename"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="static/js/material.min.js"></script>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/script.js"></script>
+</body>
+</html>
