@@ -42,6 +42,7 @@ $("document").ready(function () {
         if (checkImage(file.name)) {
             $("#filename").val(file.name);
             path = URL.createObjectURL(file);
+            $("input[type='file']").prop("files", e.originalEvent.dataTransfer.files);
             console.log(path);
             uploadImage(path);
         }
@@ -90,13 +91,5 @@ function checkImage(fileName) {
 
 //Upload Image
 function uploadImage(data) {
-    data = data.replace(/.*[\/\\]/, '');
-    $.ajax({
-        type: "POST",
-        url: "/upload",
-        data: {id: data},
-        success: function (response) {
-            alert(response);
-        }
-    });
+    $('#uploadForm').submit();
 }

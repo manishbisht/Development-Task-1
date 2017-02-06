@@ -2,7 +2,7 @@
 IMAGE_SIZE='100x100'        
 IMAGE_TYPE='png'            
 IMAGE_COLOR='gray'          
-AUTOGEN_DIR='data/autogen'  
+AUTOGEN_DIR='upload/new'  
 log() {
     local now="$(date +%F%T)"
     local message="$@"
