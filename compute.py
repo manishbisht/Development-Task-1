@@ -50,9 +50,9 @@ def inputpath():
     return ['pngimage/1.png']
 
 
-def compute(image_paths, n_eigenfaces=NUM_IMAGE,
+def compute(image_paths, image_path, n_eigenfaces=NUM_IMAGE,
             width=IMAGE_WIDTH, height=IMAGE_HEIGHT):
-    input_path = inputpath()
+    input_path = image_path
     image_matrix = np.vstack([_reshape(image, height, width)
                               for image in _imread(image_paths)])
 

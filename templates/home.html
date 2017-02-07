@@ -16,20 +16,29 @@
     </header>
     <main class="mdl-layout__content">
         <div class="page-content">
-            <div id="dragandrophandler" class="demo-card-wide mdl-card mdl-shadow--6dp">
+            {% if result %}
+                <div id="output" class="demo-card-wide mdl-card mdl-shadow--6dp">
+                    <div style="padding: 20px;">
+                        <h4>Output</h4>
+                        Matched: {{ result }}<br>
+                        File Name: {{ image }}
+                    </div>
+
+                </div>
+            {% endif %}
+            <div id="dragandrophandler" class="demo-card-wide mdl-card mdl-shadow--6dp" style="margin-top: 2%">
                 <div align="center" style="color: #9E9E9E;padding: 50px;">
-                    <form id="uploadForm" action="{{upload_url}}" enctype="multipart/form-data" method="post">
-                        Drag and drop image here or
+                    <form id="uploadForm" action="" enctype="multipart/form-data" method="post">
                         <input name="file" type="file" id="file" style="display: none"/>
                         <button type="button" id="uploadImage"
                                 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-js-ripple-effect">
                             Upload Image
                         </button>
-                        <br>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <span class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input id="filename" class="mdl-textfield__input" type="text" readonly>
                             <label id="filelabel" class="mdl-textfield__label" for="filename"></label>
-                        </div>
+                        </span>
+                        <h6>or Drag and Drop your image here</h6>
                     </form>
                 </div>
             </div>

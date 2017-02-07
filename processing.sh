@@ -2,7 +2,7 @@
 IMAGE_SIZE='100x100'        
 IMAGE_TYPE='png'            
 IMAGE_COLOR='gray'          
-AUTOGEN_DIR='upload/new'  
+AUTOGEN_DIR='upload'
 log() {
     local now="$(date +%F%T)"
     local message="$@"
@@ -28,7 +28,6 @@ main() {
     local images="$@"
     set -o errexit
     set -o nounset
-    set -o pipefail
     mkdir -p "${AUTOGEN_DIR}"
     for image_orig in ${images}; do
         if [ $(sizeof "${image_orig}") -le 12 ]; then
