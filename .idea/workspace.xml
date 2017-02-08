@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc35a064-b804-40fe-a1bf-bbaac605ab8f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload/Animals_Cats_Eyes_of_a_cat_027555_.png" afterPath="$PROJECT_DIR$/upload/Animals_Cats_Eyes_of_a_cat_027555_.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/script.js" afterPath="$PROJECT_DIR$/static/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/Animals_Cats_Eyes_of_a_cat_027555_.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/itunes-43-100x100.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
