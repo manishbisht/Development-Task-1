@@ -10,3 +10,21 @@ main {
 .mdl-button {
     font-weight: bold;
 }
+
+.card {
+    background: #3F51B5;
+}
+
+h4, h5{
+    padding: 0;
+    margin: 0;
+}
+button {
+    margin-top: 10px;
+    background: white;
+    color: #3F51B5;
+    width: 80px;
+    font-size: 15px;
+    padding: 5px;
+    border: 0;
+}

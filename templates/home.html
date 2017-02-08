@@ -17,28 +17,29 @@
     <main class="mdl-layout__content">
         <div class="page-content">
             {% if result %}
-                <div id="output" class="demo-card-wide mdl-card mdl-shadow--6dp">
-                    <div style="padding: 20px;">
-                        <h4>Output</h4>
-                        Matched: {{ result }}<br>
-                        File Name: {{ image }}
-                    </div>
-
+            <div id="output" class="card" style="border: 0; background: white">
+                <div style="padding: 20px;">
+                    <h4>Output</h4>
+                    Matched: {{ result }}<br>
+                    File Name: {{ image }}<br>
+                    Input Files: {{ input }}
                 </div>
+            </div>
             {% endif %}
-            <div id="dragandrophandler" class="demo-card-wide mdl-card mdl-shadow--6dp" style="margin-top: 2%">
-                <div align="center" style="color: #9E9E9E;padding: 50px;">
+            <div id="dragandrophandler" class="card" style="margin-top: 2%; background: #3F51B5">
+                <div align="center" style="color: white;padding: 50px;border: #1A237E 5px dotted">
+                    <div id="selected">
+                        <img id="selectedImage" style="max-width: 100%"><br>
+                        <div>
+                            <button id="remove">Remove</button>
+                            <button id="submit">Submit</button>
+                        </div>
+                    </div>
                     <form id="uploadForm" action="" enctype="multipart/form-data" method="post">
                         <input name="file" type="file" id="file" style="display: none"/>
-                        <button type="button" id="uploadImage"
-                                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-js-ripple-effect">
-                            Upload Image
-                        </button>
-                        <span class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input id="filename" class="mdl-textfield__input" type="text" readonly>
-                            <label id="filelabel" class="mdl-textfield__label" for="filename"></label>
-                        </span>
-                        <h6>or Drag and Drop your image here</h6>
+                        <i class="material-icons" style="font-size: 100px;">image</i>
+                        <h4>Drop image here</h4>
+                        <u><h5 id="uploadImage">Choose File</h5></u>
                     </form>
                 </div>
             </div>

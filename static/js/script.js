@@ -5,6 +5,7 @@ var file;
 var path;
 var obj = $("#dragandrophandler");
 $("document").ready(function () {
+    $('#selected').hide();
     //Upload Button Events
     $("#uploadImage").click(function () {
         openfileInput()
@@ -36,7 +37,6 @@ $("document").ready(function () {
     });
 
     obj.on('drop', function (e) {
-        $(this).css('border', '0px');
         e.preventDefault();
         file = e.originalEvent.dataTransfer.files[0];
         if (checkImage(file.name)) {
@@ -50,6 +50,18 @@ $("document").ready(function () {
             $("#filename").val("");
             alert("wrong File");
         }
+    });
+
+    // Removes the Image
+    $('#remove').on('click', function () {
+        $('#selected').hide();
+        $('#uploadForm').show();
+        $('#file').val("");
+    });
+
+    // Submit the Image
+    $('#submit').on('click', function () {
+        $('#uploadForm').submit();
     });
 });
 
@@ -73,7 +85,6 @@ $(document).on('dragenter', function (e) {
 $(document).on('dragover', function (e) {
     e.stopPropagation();
     e.preventDefault();
-    obj.css('border', '0px');
 });
 
 $(document).on('drop', function (e) {
@@ -91,5 +102,9 @@ function checkImage(fileName) {
 
 //Upload Image
 function uploadImage(data) {
-    $('#uploadForm').submit();
+    $('#selected').show();
+    $('#selectedImage').attr('src', data);
+    $('#uploadForm').hide();
+    //alert(data);
+    //$('#uploadForm').submit();
 }
