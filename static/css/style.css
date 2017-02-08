@@ -15,10 +15,11 @@ main {
     background: #3F51B5;
 }
 
-h4, h5{
+h4, h5 {
     padding: 0;
     margin: 0;
 }
+
 button {
     margin-top: 10px;
     background: white;
@@ -27,4 +28,34 @@ button {
     font-size: 15px;
     padding: 5px;
     border: 0;
+}
+
+#inputBox {
+    color: white;
+    padding: 50px;
+    border: #1A237E 5px dotted
+}
+
+#outputBox {
+    padding: 20px;
+    border: 2px #9E9E9E solid;
+    margin-top: 2%
+}
+
+.download{
+    display: inline-block;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px #9E9E9E solid;
+    font-size: 25px;
+    font-weight: bold;
+}
+.download:hover{
+    border: 5px #9E9E9E solid;
+}
+.downloadButton {
+    text-decoration: none;
+    color: black;
 }

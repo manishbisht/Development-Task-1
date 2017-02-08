@@ -18,16 +18,36 @@
         <div class="page-content">
             {% if result %}
             <div id="output" class="card" style="border: 0; background: white">
-                <div style="padding: 20px;">
-                    <h4>Output</h4>
+                <div id="outputBox">
+                    <h4>Whoop! Whoop! We have analysed your image! That's great!</h4><br>
+                    <img src="{{ image }}" style="max-width: 100%"><br><br>
                     Matched: {{ result }}<br>
-                    File Name: {{ image }}<br>
-                    Input Files: {{ input }}
+                    File: {{ image }}<br>
+                    Input Files: {{ input }}<br><br>
+                    <div class="download">
+                        <a class="downloadButton" href="{{ image }}" download>Download Image<i class="material-icons" style="font-size: 30px;">file_download</i>
+                        </a>
+                    </div>
+                    <div class="download" style="padding-top: 12px;">
+                        <a class="downloadButton" href="http://twitter.com/share?text=Image%20Recognition">
+                            Share on Twitter
+                        </a>
+                    </div>
+                    <div class="download" style="padding-top: 12px;">
+                        <a class="downloadButton" href="http://www.facebook.com/sharer/sharer.php">
+                            Share on Facebook
+                        </a>
+                    </div>
+                    <div class="download" style="padding-top: 12px;">
+                        <a class="downloadButton" href="/">
+                            Upload New Image
+                        </a>
+                    </div>
                 </div>
             </div>
-            {% endif %}
+            {% else %}
             <div id="dragandrophandler" class="card" style="margin-top: 2%; background: #3F51B5">
-                <div align="center" style="color: white;padding: 50px;border: #1A237E 5px dotted">
+                <div align="center" id="inputBox">
                     <div id="selected">
                         <img id="selectedImage" style="max-width: 100%"><br>
                         <div>
@@ -43,6 +63,7 @@
                     </form>
                 </div>
             </div>
+            {% endif %}
         </div>
     </main>
 </div>

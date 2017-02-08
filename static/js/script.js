@@ -62,6 +62,7 @@ $("document").ready(function () {
     // Submit the Image
     $('#submit').on('click', function () {
         $('#uploadForm').submit();
+        $('#file').val("");
     });
 });
 
